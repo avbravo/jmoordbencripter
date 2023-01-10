@@ -15,7 +15,9 @@ import javax.crypto.spec.SecretKeySpec;
 
 /**
  *
- * @author avbravo
+ * @author Lokesh Gupta
+ * Email: howtodoinjava@gmail.com
+ * Twitter: @HowToDoInJava
  * https://howtodoinjava.com/java/java-security/java-aes-encryption-example/
  */
 public class Encryptor {

@@ -39,6 +39,8 @@ public class JWTEncrypter {
 
             JSONArray audArray = new JSONArray();
             audArray.put(jWTEntity.getGroup());
+            
+           
             audArray.put(jWTEntity.getPassword());
 
             jwtPayload.put("sub", jWTEntity.getSubject());
