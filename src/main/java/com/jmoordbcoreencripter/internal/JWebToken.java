@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.jmoordbcoreencripter.jmoordbencripter;
+package com.jmoordbcoreencripter.internal;
 
 import java.nio.charset.StandardCharsets;
 import java.security.InvalidKeyException;
@@ -28,9 +28,9 @@ import org.json.JSONObject;
  * Generate JWT Token and Verify in Plain Java
  */
 public class JWebToken {
-    private static final String SECRET_KEY = "FREE_MASON"; //@TODO Add Signature here
+   // private static final String SECRET_KEY = "FREE_MASON"; //@TODO Add Signature here
     private static final char[] HEX_ARRAY = "0123456789ABCDEF".toCharArray();
-    private static final String ISSUER = "mason.metamug.net";
+    private static final String ISSUER= "avbravo.blogpost.com";
     private static final String JWT_HEADER = "{\"alg\":\"HS256\",\"typ\":\"JWT\"}";
     private JSONObject payload = new JSONObject();
     private String signature;
@@ -40,11 +40,11 @@ public class JWebToken {
         encodedHeader = encode(new JSONObject(JWT_HEADER));
     }
 
-    public JWebToken(JSONObject payload) {
-        this(payload.getString("sub"), payload.getJSONArray("aud"), payload.getLong("exp"));
+    public JWebToken(JSONObject payload, String SECRET_KEY) {
+        this(payload.getString("sub"), payload.getJSONArray("aud"), payload.getLong("exp"),SECRET_KEY);
     }
 
-    public JWebToken(String sub, JSONArray aud, long expires) {
+    public JWebToken(String sub, JSONArray aud, long expires, String SECRET_KEY) {
         this();
         payload.put("sub", sub);
         payload.put("aud", aud);
@@ -88,7 +88,7 @@ public class JWebToken {
         return encodedHeader + "." + encode(payload) + "." + signature;
     }
 
-    public boolean isValid() {
+    public boolean isValid(String SECRET_KEY) {
         return payload.getLong("exp") > (LocalDateTime.now().toEpochSecond(ZoneOffset.UTC)) //token not expired
                 && signature.equals(hmacSha256(encodedHeader + "." + encode(payload), SECRET_KEY)); //signature matched
     }
