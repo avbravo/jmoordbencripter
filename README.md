@@ -4,15 +4,14 @@ Es un API para realizar encriptaciones en los proyectos con Jmoordb-core.
 
 Varias librerias son usadas con el consentimiento de sus autores entre ellos
 
- * Author Lokesh Gupta
-   Email: howtodoinjava@gmail.com
-   Twitter: [@HowToDoInJava](@HowToDoInJava)
-   [Java AES Encryption Decryption Example](https://howtodoinjava.com/java/java-security/java-aes-encryption-example/)
+ * Author Lokesh Gupta  
+   Email: howtodoinjava@gmail.com  
+   Twitter: [@HowToDoInJava](@HowToDoInJava)  
+   [Java AES Encryption Decryption Example](https://howtodoinjava.com/java/java-security/java-aes-encryption-example/)  
 
-* Author Deepak Mishra 
-  Email:
-  Twitter: [@D3EP4K](@D3EP4K)
-  [Generate JWT Token and Verify in Plain Java](https://metamug.com/article/security/jwt-java-tutorial-create-verify.html)
+* Author Deepak Mishra   
+  Twitter: [@D3EP4K](@D3EP4K)  
+  [Generate JWT Token and Verify in Plain Java](https://metamug.com/article/security/jwt-java-tutorial-create-verify.html)  
 
 
 
