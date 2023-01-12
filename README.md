@@ -11,7 +11,8 @@ Varias librerias son usadas con el consentimiento de sus autores entre ellos
 
 * Author Deepak Mishra   
   Twitter: [@D3EP4K](@D3EP4K)  
-  [Generate JWT Token and Verify in Plain Java](https://metamug.com/article/security/jwt-java-tutorial-create-verify.html)  
+  Generate JWT Token and Verify in Plain Java
+  [https://metamug.com/article/security/jwt-java-tutorial-create-verify.html](https://metamug.com/article/security/jwt-java-tutorial-create-verify.html)  
 
 
 
