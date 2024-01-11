@@ -45,7 +45,7 @@ private static SecretKeySpec secretKey;
       return Base64.getEncoder()
         .encodeToString(cipher.doFinal(strToEncrypt.getBytes("UTF-8")));
     } catch (Exception e) {
-      System.out.println("Error while encrypting: " + e.toString());
+      System.out.println("Encryptor.encrypt()->[Error while encrypting]: " + e.toString());
     }
     return null;
   }
@@ -58,7 +58,9 @@ private static SecretKeySpec secretKey;
       return new String(cipher.doFinal(Base64.getDecoder()
         .decode(strToDecrypt)));
     } catch (Exception e) {
-      System.out.println("Error while decrypting: " + e.toString());
+        System.out.println("\t[test] secretKey"+secretKey);
+        System.out.println("\t[test] strToDecrypt"+strToDecrypt);
+      System.out.println("Encryptor.decrypt()-> [Error while dencrypting]: " + e.toString());
     }
     return null;
   }
