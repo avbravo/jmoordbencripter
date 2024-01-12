@@ -52,7 +52,7 @@ public class Encryptor {
     public static String decrypt(final String strToDecrypt, final String secret, final String nameOfMethod) {
         try {
             count++;
-            System.out.println("\tþ[decrypt count] "+count);
+            System.out.println("\t\tþ[decrypt count] "+count);
             setKey(secret);
             Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5PADDING");
             cipher.init(Cipher.DECRYPT_MODE, secretKey);
