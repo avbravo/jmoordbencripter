@@ -49,10 +49,17 @@ public class Encryptor {
         return null;
     }
 
-    public static String decrypt(final String strToDecrypt, final String secret, final String nameOfMethod) {
+    public static String decrypt(final String strToDecrypt, final String secret, final String nameOfMethod, final Boolean... show) {
         try {
+              Boolean visible = Boolean.FALSE;
+          
+                visible  = show.length != 0 ?show[0]:Boolean.FALSE;
+
             count++;
-//            System.out.println("\t\tþ[decrypt count] "+count);
+            if(visible){
+                     System.out.println("\t\tþ[decrypt count] "+count);
+            }
+
             setKey(secret);
             Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5PADDING");
             cipher.init(Cipher.DECRYPT_MODE, secretKey);
